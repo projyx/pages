@@ -1,7 +1,10 @@
 <html>
     <head>
         <title>Pages | Notes | Jyxer</title>
+        <link async href="https://cdn.jsdelivr.net/npm/css.gg/icons/icons.css" rel="stylesheet">
         <link href="./index.css" rel="stylesheet">
+        <link href="./raw/style/_.css" rel="stylesheet">
+        <link href="./raw/style/theme.css" rel="stylesheet">
         <script src="./index.js"></script>
     </head>
     <body>
@@ -17,7 +20,7 @@
                     </flex>
                 </card>
                 <card class="card-buttons">
-                    <section>
+                    <row>
                         <box class="box-create">
                             <section>
                                 <i>
@@ -37,14 +40,70 @@
                                 <picture></picture>
                             </section>
                         </box>
-                    </section>
+                    </row>
                 </card>
             </row>
         </header>
-        <main>
-            <page>
+        <nav class="body-nav">
+            <column>
+                <card>
+                    <column>
+                        <box>
+                            <row>
+                                <i>
+                                    <con></con>
+                                </i>
+                            </row>
+                        </box>
+                    </column>
+                </card>
+            </column>
+        </nav>
+        <aside class="body-aside"></aside>
+        <main class="body-main">
+            <page routes="/">
                 <blocks>
-                    <block></block>
+                    <block>
+                        <header>
+                            <card>
+                                <row>
+                                    <i>
+                                        <con class="gg-trash"></con>
+                                    </i>
+                                </row>
+                            </card>
+                            <card>
+                                <row>
+                                    <i>
+                                        <con class="gg-format-text"></con>
+                                    </i>
+                                    <i>
+                                        <con class="gg-layout-list"></con>
+                                    </i>
+                                    <i>
+                                        <con class="gg-view-grid"></con>
+                                    </i>
+                                </row>
+                            </card> 
+                            <card>
+                                <row>
+                                    <i>
+                                        <con></con>
+                                    </i>
+                                    <i>
+                                        <con class="gg-pen"></con>
+                                    </i>
+                                </row>
+                            </card>             
+                        </header>
+                        <flex>
+                            <card>
+                                <section>
+                                    <textarea></textarea>
+                                </section>
+                            </card>
+                        </flex>
+                    </block>
                 </blocks>
             </page>
         </main>
