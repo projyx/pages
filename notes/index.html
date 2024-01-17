@@ -1,11 +1,31 @@
 <html>
     <head>
         <title>Pages | Notes | Jyxer</title>
-        <link async href="https://cdn.jsdelivr.net/npm/css.gg/icons/icons.css" rel="stylesheet">
-        <link href="./index.css" rel="stylesheet">
-        <link href="./raw/style/_.css" rel="stylesheet">
-        <link href="./raw/style/theme.css" rel="stylesheet">
-        <script src="./index.js"></script>
+        <template>
+            <div>
+                <link async href="https://cdn.jsdelivr.net/npm/css.gg/icons/icons.css" rel="stylesheet">
+                <link href="index.css" rel="stylesheet">
+                <link href="raw/style/_.css" rel="stylesheet">
+                <link href="raw/style/theme.css" rel="stylesheet">
+                <script src="index.js"></script>
+            </div>
+        </template>
+        <script>
+            var domains = {
+                "projyx.github.io": "/notes",
+                "pages.jyxer.com": "/",
+                "pages.jyxer.tld": "/notes"
+            };
+            var base = document.createElement('base');
+            var template = document.head.querySelector('template');
+            var host = window.location.host;
+            var origin = window.location.origin;
+            base.href = origin + domains[host] + "/";
+            document.head.querySelector('script').insertAdjacentHTML("afterend", base.outerHTML);
+            base = document.head.querySelector('script').nextElementSibling;
+            console.log(base, template);
+            base.insertAdjacentHTML("afterend", template.content.firstElementChild.innerHTML);
+        </script>
     </head>
     <body>
         <header class="body-header">
@@ -13,7 +33,7 @@
                 <card class="card-branding">
                     <flex>
                         <picture>
-                            <img src="./raw/asset/png/jyxer.png">
+                            <img src="raw/asset/png/jyxer.png">
                         </picture>
                         <text>Pages</text>
                         <text>Notes</text>
@@ -37,7 +57,9 @@
                         </box>
                         <box class="box-avatar">
                             <section>
-                                <picture></picture>
+                                <picture>
+                                    <img id="avatar">
+                                </picture>
                             </section>
                         </box>
                     </row>
@@ -84,7 +106,7 @@
                                         <con class="gg-view-grid"></con>
                                     </i>
                                 </row>
-                            </card> 
+                            </card>
                             <card>
                                 <row>
                                     <i>
@@ -94,7 +116,7 @@
                                         <con class="gg-pen"></con>
                                     </i>
                                 </row>
-                            </card>             
+                            </card>
                         </header>
                         <flex>
                             <card>
