@@ -9,6 +9,7 @@ page[routes="/"] {
     }
 
     page[routes="/"] blocks > block {
+        color: #fe0000;
         flex-direction: column;
         height: 100%;
         width: 100%;

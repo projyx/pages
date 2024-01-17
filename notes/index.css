@@ -22,6 +22,10 @@
         display: flex;
     }
 
+    column, row {
+        width: 100%;
+    }
+
     i {
         align-items: center;
         display: flex;
@@ -41,6 +45,22 @@
         box-sizing: border-box;
         width: 240px;
         height: calc(100% - 50px);
+    }
+    
+    body > .body-nav .nav-card {
+        box-sizing: border-box;
+        width: 240px;
+        height: calc(100% - 50px);
+    }
+    
+    body > .body-nav .nav-card .card-box {
+        box-sizing: border-box;
+        line-height: 50px;
+        width: 100%;
+    }
+    
+    body > .body-nav .nav-card .card-box i {
+        color: #fe0000;
     }
 }
 
@@ -142,6 +162,10 @@
     body > .body-header .card-buttons .box-avatar picture img {
         height: 100%;
         width: 100%;
+    }
+    
+    body > .body-header .card-buttons .box-create{
+        opacity: calc(5/6)
     }
     
     body > .body-header .card-buttons .box-navi {
