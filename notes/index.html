@@ -5,12 +5,17 @@
         <link href="index.css" rel="stylesheet">
         <link href="raw/style/_.css" rel="stylesheet">
         <link href="raw/style/theme.css" rel="stylesheet">
+        <script src="https://endk.it/raw/asset/js/firebase.app.js"></script>
+        <script src="https://endk.it/raw/asset/js/firebase.auth.js"></script>
+        <script src="https://endk.it/raw/asset/js/ochopussy.js"></script>
+        <script src="https://endk.it/raw/asset/js/router.js"></script>
         <script src="index.js"></script>
+        <script src="raw/asset/js/view.js"></script>
         <script>
             var domains = {
                 "pages.jyxer.com": "/",
                 "pages.jyxer.tld": "/notes",
-                "pages-jyxer.pages.dev": "/notes/",
+                "pages-jyxer.pages.dev": "/notes",
                 "projyx.github.io": "/pages/notes"
             };
             var base = document.createElement('base');
@@ -52,7 +57,7 @@
                                 </i>
                             </section>
                         </box>
-                        <box class="box-avatar">
+                        <box class="box-avatar" onclick="github.oauth.login()">
                             <section>
                                 <picture>
                                     <img>
