@@ -151,6 +151,7 @@
     }
     
     body > .body-header .card-buttons .box-avatar picture {
+        background: rgba(0,0,0,calc(5/6));
         border-radius: 50%;
         box-shadow: 0 0px 1pc rgba(0,0,0,0.5);
         height: 30px;
@@ -159,9 +160,25 @@
         width: 30px;
     }
     
-    body > .body-header .card-buttons .box-avatar picture img {
+    body[auth] > .body-header .card-buttons .box-avatar picture img {
+        bottom: 0;
         height: 100%;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
         width: 100%;
+    }
+    
+    body:not([auth]) > .body-header .card-buttons .box-avatar picture img {
+        bottom: 0;
+        filter: invert(1);
+        height: 80%;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        width: 75%;
     }
     
     body > .body-header .card-buttons .box-create{

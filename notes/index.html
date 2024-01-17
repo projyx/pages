@@ -1,15 +1,11 @@
 <html>
     <head>
         <title>Pages | Notes | Jyxer</title>
-        <template>
-            <div>
                 <link async href="https://cdn.jsdelivr.net/npm/css.gg/icons/icons.css" rel="stylesheet">
                 <link href="index.css" rel="stylesheet">
                 <link href="raw/style/_.css" rel="stylesheet">
                 <link href="raw/style/theme.css" rel="stylesheet">
                 <script src="index.js"></script>
-            </div>
-        </template>
         <script>
             var domains = {
                 "pages.jyxer.com": "/",
@@ -23,8 +19,8 @@
             base.href = origin + domains[host] + "/";
             document.head.querySelector('script').insertAdjacentHTML("afterend", base.outerHTML);
             base = document.head.querySelector('script').nextElementSibling;
-            console.log(base, template);
-            base.insertAdjacentHTML("afterend", template.content.firstElementChild.innerHTML);
+            //console.log(base, template);
+            //base.insertAdjacentHTML("afterend", template.content.firstElementChild.innerHTML);
         </script>
     </head>
     <body>
@@ -58,7 +54,7 @@
                         <box class="box-avatar">
                             <section>
                                 <picture>
-                                    <img id="avatar">
+                                    <img>
                                 </picture>
                             </section>
                         </box>
