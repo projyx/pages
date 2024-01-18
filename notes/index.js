@@ -48,22 +48,28 @@ window.onload = async function() {
             }) : null;
             try {
                 var uid = user.uid;
-                var user = await github.user.self();
-                //console.log(user);
+                var user = await github.user.self(user);
+                console.log(52, user);
                 var avatar_url = user.avatar_url;
+                var token = '';
+
+                const avi = document.body.querySelector('.box-avatar');
+                var img = avi.querySelector('img');
+                img.src = avatar_url;
 
                 document.body.setAttribute('uid', uid)
-                localStorage.setItem('githubAccessToken', token);
+                //localStorage.setItem('githubAccessToken', token);
 
-                localStorage.setItem("user", user.login);
+                //localStorage.setItem("user", user.login);
 
                 rout.er(pathname);
+                authState(user)
             } catch (e) {
                 console.log(56, 'onAuthStateChanged', {
                     e
                 });
-
                 rout.er(pathname);
+                authState(user)
             }
         } else {
             window.user = null;
@@ -72,22 +78,33 @@ window.onload = async function() {
                 avatar.innerHTML = "";
             });
             rout.er(pathname);
+            authState(user)
         }
         //dom.body.dataset.load = "ed";
     }
     );
-    
 
-    const githubAccessToken = localStorage.githubAccessToken;
-    if (githubAccessToken) {
-        var repos = await github.user.repos();
-        console.log(22, {
-            repos
-        });
-    } else {    
-        const avi = document.body.querySelector('.box-avatar');
-        var img = avi.querySelector('img');
-        img.src = "raw/asset/svg/github.svg";
+    async function authState() {
+        const githubAccessToken = localStorage.githubAccessToken;
+        if (githubAccessToken) {
+            var repos = await github.user.repos();
+            var card = document.querySelector(".nav-card");
+            var template = card.querySelector("template");
+            console.log(22, {
+                repos,
+                card,
+                template
+            });
+            repos.forEach(function(repo) {
+                var box = template.content.firstElementChild.cloneNode(true);
+                box.querySelector("text").textContent = repo.name;
+                template.previousElementSibling.insertAdjacentHTML('beforeend', box.outerHTML);
+            });
+        } else {
+            const avi = document.body.querySelector('.box-avatar');
+            var img = avi.querySelector('img');
+            img.src = "raw/asset/svg/github.svg";
+        }
     }
 
     document.getElementById('snippets').classList.add('active');

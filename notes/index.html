@@ -2,6 +2,7 @@
     <head>
         <title>Notes [ Pages ] Jyxer | ProJyx</title>
         <link async href="https://cdn.jsdelivr.net/npm/css.gg/icons/icons.css" rel="stylesheet">
+        <link href="https://endk.it/raw/asset/css/ui.css" rel="stylesheet">
         <link href="index.css" rel="stylesheet">
         <link href="raw/style/_.css" rel="stylesheet">
         <link href="raw/style/theme.css" rel="stylesheet">
@@ -10,7 +11,7 @@
         <script src="https://endk.it/raw/asset/js/ochopussy.js"></script>
         <script src="https://endk.it/raw/asset/js/router.js"></script>
         <script src="index.js"></script>
-        <script src="raw/asset/js/view.js"></script>
+        <script src="raw/asset/js/routes.js"></script>
         <script>
             var domains = {
                 "pages.jyxer.com": "/",
@@ -29,7 +30,7 @@
             //base.insertAdjacentHTML("afterend", template.content.firstElementChild.innerHTML);
         </script>
     </head>
-    <body>
+    <body theme="auto">
         <header class="body-header">
             <row>
                 <card class="card-branding">
@@ -81,10 +82,57 @@
                             </row>
                         </box>
                     </column>
+                    <template>
+                        <box class="card-box" id="snippets">
+                            <row>
+                                <i>
+                                    <con class="gg-folder"></con>
+                                </i>
+                                <text></text>
+                            </row>
+                        </box>
+                    </template>
                 </card>
             </column>
         </nav>
-        <aside class="body-aside"></aside>
+        <aside class="body-aside">
+            <header class="aside-header">
+                <card class="header-card">
+                    <form>
+                        <box class="card-box">
+                            <flex>
+                                <i>
+                                    <con class="gg-search"></con>
+                                </i>
+                                <input placeholder="Search All Notes" type="text">
+                            </flex>
+                        </box>
+                    </form>
+                </card>
+            </header>
+            <column class="aside-column">
+                <card class="column-card">
+                    <column>
+                        <box class="card-box" id="snippets">
+                            <column>
+                                <text placeholder="Title"></text>
+                                <text>
+                                    <span placeholder="Date"></span>
+                                    <span placeholder="Content"></span>
+                                </text>
+                                <text>
+                                    <i>
+                                        <con class="gg-folder"></con>
+                                    </i>
+                                    <text>Folder</text>
+                                </text>
+                            </column>
+                        </box>
+                    </column>
+                    <template></template>
+                </card>
+            </column>
+        </aside>
         <main class="body-main">
             <page routes="/">
                 <blocks>

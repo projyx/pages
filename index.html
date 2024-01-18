@@ -1,11 +1,33 @@
 <html>
     <head>
         <title>[ Pages ] Jyxer | ProJyx</title>
-        <link href="/index.css" rel="stylesheet">
-        <script src="/index.js"></script>
+        <link async href="https://cdn.jsdelivr.net/npm/css.gg/icons/icons.css" rel="stylesheet">
+        <link href="index.css" rel="stylesheet">
+        <link href="raw/style/_.css" rel="stylesheet">
+        <link href="raw/style/theme.css" rel="stylesheet">
         <script src="https://endk.it/raw/asset/js/firebase.app.js"></script>
         <script src="https://endk.it/raw/asset/js/firebase.auth.js"></script>
-        <script src="https://endk.it/raw/asset/js/raw/asset/js/router.js"></script>
+        <script src="https://endk.it/raw/asset/js/ochopussy.js"></script>
+        <script src="https://endk.it/raw/asset/js/router.js"></script>
+        <script src="index.js"></script>
+        <script src="raw/asset/js/routes.js"></script>
+        <script>
+            var domains = {
+                "pages.jyxer.com": "/",
+                "pages.jyxer.tld": "/notes",
+                "pages-jyxer.pages.dev": "/notes",
+                "projyx.github.io": "/pages/notes"
+            };
+            var base = document.createElement('base');
+            var template = document.head.querySelector('template');
+            var host = window.location.host;
+            var origin = window.location.origin;
+            base.href = origin + domains[host] + "/";
+            document.head.querySelector('script').insertAdjacentHTML("afterend", base.outerHTML);
+            base = document.head.querySelector('script').nextElementSibling;
+            //console.log(base, template);
+            //base.insertAdjacentHTML("afterend", template.content.firstElementChild.innerHTML);
+        </script>
     </head>
     <body>
         <header>pages</header>
