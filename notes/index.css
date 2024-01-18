@@ -61,18 +61,29 @@
     }
     
     body > .body-aside .column-card .card-box {
-        border: 1px solid #bbb;
-        border-radius: 10px;
+        background: #222;
+        /* border: 1px solid #bbb; */
+        /* border-radius:3px; */
+        color: #ddd;
         box-sizing: border-box;
         flex-direction: column;
+        gap: 5px;
         margin: 10px;
-        padding: 10px 20px;
+        padding: 20px 20px;
         width: 100%;
     }
     
+    body > .body-aside .column-card .card-box > :first-child {
+        font-weight: bolder;
+    }
+    
+    body > .body-aside .column-card .card-box i {
+        --ggs: calc(4/5);
+    }
+    
     body > .body-aside .header-card {
-        height: 30px;
-        margin: 10px;
+        /* height: 30px; */
+        /* margin: 10px; */
     }
     
     body > .body-aside .header-card > form {
@@ -89,10 +100,18 @@
     }
     
     body > .body-aside .header-card > form .card-box {
-        background: #777;
-        border-radius: 10px;
-        color: black;
-        width: 100%;
+        /* background: #777; */
+        /* border-radius: 3px; */
+        /* color: black; */
+        /* width: 100%; */
+        border-bottom: 1px solid;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 5px;
+    }
+    
+    body > .body-aside .header-card > form .card-box > flex {
+        align-items: center;
     }
     
     body > .body-aside .header-card > form .card-box i {
