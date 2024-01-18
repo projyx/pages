@@ -21,10 +21,10 @@
     }
 
     body > .body-nav .nav-card {
-        box-sizing: border-box;
+        /* box-sizing: border-box; */
         height: calc(100% - 50px);
-        overflow: hidden;
-        width: 240px;
+        /* overflow: hidden; */
+        width: 100%;
     }
 
     body > .body-nav .nav-card > column {
@@ -32,11 +32,23 @@
     }
 
     body > .body-nav .nav-card .card-box {
-        border-bottom: 1px solid #ccc;
         box-sizing: border-box;
-        padding: 0 10px;
+        flex-direction: column;
+        font-size: 13px;
+        gap: 5px;
         line-height: 50px;
-        width: 100%;
+    }
+
+    body > .body-nav .nav-card > column > .card-box {
+        padding: 0 10px;
+    }
+
+    body > .body-nav .nav-card > column .card-box > * {
+        gap: 5px;
+    }
+
+    body > .body-nav .nav-card > column > .card-box > column {
+        padding-left: 16px;
     }
 
     body > .body-nav .nav-card .card-box i {
