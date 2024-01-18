@@ -21,8 +21,9 @@
 
     body > .body-nav .nav-card {
         box-sizing: border-box;
-        width: 240px;
         height: calc(100% - 50px);
+        overflow: hidden;
+        width: 240px;
     }
 
     body > .body-nav .nav-card > column {
@@ -32,12 +33,15 @@
     body > .body-nav .nav-card .card-box {
         border-bottom: 1px solid #ccc;
         box-sizing: border-box;
+        padding: 0 10px;
         line-height: 50px;
         width: 100%;
     }
 
     body > .body-nav .nav-card .card-box i {
         color: #fe0000;
+        height: 50px;
+        width: 30px;
     }
 }
 
@@ -47,6 +51,23 @@
         box-sizing: border-box;
         width: 320px;
         height: calc(100% - 50px);
+    }
+    
+    body > .body-aside .column-card {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    body > .body-aside .column-card .card-box {
+        border: 1px solid #bbb;
+        border-radius: 10px;
+        box-sizing: border-box;
+        flex-direction: column;
+        margin: 10px;
+        padding: 10px 20px;
+        width: 100%;
     }
     
     body > .body-aside .header-card {
