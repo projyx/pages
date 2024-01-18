@@ -15,8 +15,9 @@
     body > .body-nav {
         border-right: 1px solid #ccc;
         box-sizing: border-box;
-        width: 240px;
         height: calc(100% - 50px);
+        overflow-x: hidden;
+        width: 240px;
     }
 
     body > .body-nav .nav-card {
@@ -52,14 +53,14 @@
         width: 320px;
         height: calc(100% - 50px);
     }
-    
+
     body > .body-aside .column-card {
         align-items: center;
         display: flex;
         justify-content: center;
         width: 100%;
     }
-    
+
     body > .body-aside .column-card .card-box {
         background: #222;
         /* border: 1px solid #bbb; */
@@ -72,33 +73,33 @@
         padding: 20px 20px;
         width: 100%;
     }
-    
+
     body > .body-aside .column-card .card-box > :first-child {
         font-weight: bolder;
     }
-    
+
     body > .body-aside .column-card .card-box i {
         --ggs: calc(4/5);
     }
-    
+
     body > .body-aside .header-card {
         /* height: 30px; */
         /* margin: 10px; */
     }
-    
+
     body > .body-aside .header-card > form {
         width: 100%;
     }
-    
+
     body > .body-aside .header-card > form .card-box {
         width: 100%;
     }
-    
+
     body > .body-aside .header-card > form .card-box text {
         display: flex;
         flex: 1;
     }
-    
+
     body > .body-aside .header-card > form .card-box {
         /* background: #777; */
         /* border-radius: 3px; */
@@ -109,21 +110,21 @@
         line-height: 50px;
         padding: 0 5px;
     }
-    
+
     body > .body-aside .header-card > form .card-box > flex {
         align-items: center;
     }
-    
+
     body > .body-aside .header-card > form .card-box i {
         height: 30px;
         opacity: 0.75;
         width: 30px;
     }
-    
+
     body > .body-aside .header-card > form .card-box i con {
         --ggs: 0.75;
     }
-    
+
     body > .body-aside .header-card > form .card-box input {
         background: transparent;
         border: none;
@@ -217,6 +218,12 @@
         height: 100%;
     }
 
+    @media (prefers-color-scheme: dark) {
+        body > .body-header .card-buttons {
+            color: fff;
+        }
+    }
+
     body > .body-header .card-buttons .box-avatar picture {
         background: rgba(0,0,0,calc(5/6));
         border-radius: 50%;
@@ -249,10 +256,18 @@
     }
 
     body > .body-header .card-buttons .box-create {
-        opacity: calc(5/6)
+        opacity: calc(5/6);
+    }
+
+    body > .body-header .card-buttons .box-create i {
+        width: 50px;
     }
 
     body > .body-header .card-buttons .box-navi {
-        opacity: calc(5/6)
+        opacity: calc(5/6);
+    }
+
+    body > .body-header .card-buttons .box-navi i {
+        width: 50px;
     }
 }
