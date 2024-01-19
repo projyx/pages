@@ -1,8 +1,8 @@
 <html>
     <head>
         <title>[ Pages ] Jyxer | ProJyx</title>
-        <link async href="https://cdn.jsdelivr.net/npm/css.gg/icons/icons.css" rel="stylesheet">
-        <link href="https://endk.it/raw/asset/css/ui.css" rel="stylesheet">
+        <link async href="https://endk.it/raw/asset/css/icons.css" rel="stylesheet">
+        <link async href="https://endk.it/raw/asset/css/ui.css" rel="stylesheet">
         <link href="index.css" rel="stylesheet">
         <link href="raw/style/_.css" rel="stylesheet">
         <link href="raw/style/theme.css" rel="stylesheet">
@@ -44,7 +44,7 @@
                 </card>
                 <card class="card-buttons">
                     <row>
-                        <box class="box-create">
+                        <box class="box-create" href="/notes">
                             <flex>
                                 <i>
                                     <con class="gg-add"></con>
@@ -87,7 +87,7 @@
                                 <i>
                                     <con class="gg-folder"></con>
                                 </i>
-                                <text>Documents</text>
+                                <text>Browse</text>
                             </row>
                         </box>
                         <box class="card-box" id="snippets">
@@ -164,16 +164,19 @@
                         </header>
                         <column>
                             <card>
-                                <section>
-                                    <box>
+                                <row>
+                                    <box class="box-tree">
                                         <row>
                                             <i>
                                                 <con class="gg-cloud"></con>
                                             </i>
-                                                <text>iCloud Drive</text>
+                                            <text>
+                                                <span>Cloud</span>
+                                                <span>Explorer</span>
+                                            </text>
                                         </row>
                                     </box>
-                                </section>
+                                </row>
                             </card>
                         </column>
                     </block>
