@@ -225,9 +225,7 @@
     body > .body-header .card-branding picture + text + text {
         color: #fe0000;
     }
-}
-
-@media {
+    
     body > .body-header .card-buttons {
         color: #111;
         display: flex;
