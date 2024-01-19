@@ -242,14 +242,19 @@
         }
     }
 
-    body > .body-header .card-buttons .box-avatar picture {
+    body > .body-header .card-buttons .box-avatar {
         background: rgba(0,0,0,calc(5/6));
         border-radius: 50%;
         box-shadow: 0 0px 1pc rgba(0,0,0,0.5);
         height: 30px;
         margin: 10px;
+        overflow: hidden;
         position: relative;
         width: 30px;
+    }
+
+    body[auth] > .body-header .card-buttons .box-avatar picture:empty + picture {
+        display: none;
     }
 
     body[auth] > .body-header .card-buttons .box-avatar picture img {
@@ -262,7 +267,11 @@
         width: 100%;
     }
 
-    body:not([auth]) > .body-header .card-buttons .box-avatar picture img {
+    body:not([auth]) > .body-header .card-buttons .box-avatar picture:not(:empty) + picture {
+        display: none;
+    }
+
+    body:not([auth]) > .body-header .card-buttons .box-avatar picture + picture img {
         bottom: 0;
         filter: invert(1);
         height: 80%;

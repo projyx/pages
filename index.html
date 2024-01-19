@@ -2,6 +2,7 @@
     <head>
         <title>[ Pages ] Jyxer | ProJyx</title>
         <link async href="https://cdn.jsdelivr.net/npm/css.gg/icons/icons.css" rel="stylesheet">
+        <link href="https://endk.it/raw/asset/css/ui.css" rel="stylesheet">
         <link href="index.css" rel="stylesheet">
         <link href="raw/style/_.css" rel="stylesheet">
         <link href="raw/style/theme.css" rel="stylesheet">
@@ -14,7 +15,7 @@
         <script>
             var domains = {
                 "pages.jyxer.com": "/",
-                "pages.jyxer.tld": "/notes",
+                "pages.jyxer.tld": "/",
                 "pages-jyxer.pages.dev": "/notes",
                 "projyx.github.io": "/pages/notes"
             };
@@ -22,17 +23,181 @@
             var template = document.head.querySelector('template');
             var host = window.location.host;
             var origin = window.location.origin;
-            base.href = origin + domains[host] + "/";
+            base.href = origin + domains[host] + (window.location.origin + "/" === window.location.href ? "" : "/");
             document.head.querySelector('script').insertAdjacentHTML("afterend", base.outerHTML);
             base = document.head.querySelector('script').nextElementSibling;
             //console.log(base, template);
             //base.insertAdjacentHTML("afterend", template.content.firstElementChild.innerHTML);
         </script>
     </head>
-    <body>
-        <header>pages</header>
-        <main auth="true">
-            <page route="/"></page>
+    <body theme="auto">
+        <header class="body-header">
+            <row>
+                <card class="card-branding">
+                    <flex>
+                        <picture>
+                            <img src="raw/asset/png/jyxer.png">
+                        </picture>
+                        <text>Jyxer</text>
+                        <text>Pages</text>
+                    </flex>
+                </card>
+                <card class="card-buttons">
+                    <row>
+                        <box class="box-create">
+                            <flex>
+                                <i>
+                                    <con class="gg-add"></con>
+                                </i>
+                            </flex>
+                        </box>
+                        <box class="box-navi">
+                            <flex>
+                                <i>
+                                    <con class="gg-menu-grid-o"></con>
+                                </i>
+                            </flex>
+                        </box>
+                        <box class="box-avatar" onclick="github.oauth.login()">
+                            <flex>
+                                <picture></picture>
+                                <picture>
+                                    <img src="/raw/asset/png/github.png">
+                                </picture>
+                            </flex>
+                        </box>
+                    </row>
+                </card>
+            </row>
+        </header>
+        <nav class="body-nav">
+            <column>
+                <card class="nav-card">
+                    <column>
+                        <box class="card-box" id="snippets">
+                            <row>
+                                <i>
+                                    <con class="gg-timer"></con>
+                                </i>
+                                <text>Recents</text>
+                            </row>
+                        </box>
+                        <box class="card-box" id="snippets">
+                            <row>
+                                <i>
+                                    <con class="gg-folder"></con>
+                                </i>
+                                <text>Documents</text>
+                            </row>
+                        </box>
+                        <box class="card-box" id="snippets">
+                            <row>
+                                <i>
+                                    <con class="gg-trash"></con>
+                                </i>
+                                <text>Trash</text>
+                            </row>
+                        </box>
+                    </column>
+                </card>
+                <card class="nav-card">
+                    <column>
+                        <box class="card-box" id="snippets">
+                            <row>
+                                <i>
+                                    <con class="gg-share"></con>
+                                </i>
+                                <text>Shared</text>
+                            </row>
+                        </box>
+                    </column>
+                </card>
+            </column>
+        </nav>
+        <aside class="body-aside">
+            <header class="aside-header">
+                <card class="header-card">
+                    <form>
+                        <box class="card-box">
+                            <flex>
+                                <i>
+                                    <con class="gg-search"></con>
+                                </i>
+                                <input placeholder="Search All Notes" type="text">
+                            </flex>
+                        </box>
+                    </form>
+                </card>
+            </header>
+            <column class="aside-column">
+                <card class="column-card">
+                    <column></column>
+                    <template>
+                        <box class="card-box" id="snippets">
+                            <column>
+                                <text placeholder="Title"></text>
+                            </column>
+                            <column>
+                                <text placeholder="Date"></text>
+                                <text placeholder="Content"></text>
+                            </column>
+                            <row>
+                                <i>
+                                    <con class="gg-folder"></con>
+                                </i>
+                                <text>Folder</text>
+                            </row>
+                        </box>
+                    </template>
+                </card>
+            </column>
+        </aside>
+        <main class="body-main">
+            <page routes="/">
+                <blocks>
+                    <block>
+                        <header>
+                            <card>
+                                <row>
+                                    <i>
+                                        <con class="gg-trash"></con>
+                                    </i>
+                                </row>
+                            </card>
+                            <card>
+                                <row>
+                                    <i>
+                                        <con class="gg-format-text"></con>
+                                    </i>
+                                    <i>
+                                        <con class="gg-layout-list"></con>
+                                    </i>
+                                    <i>
+                                        <con class="gg-view-grid"></con>
+                                    </i>
+                                </row>
+                            </card>
+                            <card>
+                                <row>
+                                    <i>
+                                        <con></con>
+                                    </i>
+                                    <i>
+                                        <con class="gg-pen"></con>
+                                    </i>
+                                </row>
+                            </card>
+                        </header>
+                        <flex>
+                            <card>
+                                <section>
+                                    <textarea></textarea>
+                                </section>
+                            </card>
+                        </flex>
+                    </block>
+                </blocks>
+            </page>
         </main>
     </body>
 </html>

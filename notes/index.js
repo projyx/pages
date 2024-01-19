@@ -50,12 +50,12 @@ window.onload = async function() {
                 var uid = user.uid;
                 var user = await github.user.self(user);
                 console.log(52, user);
-                var avatar_url = user.avatar_url;
-                var token = '';
 
                 const avi = document.body.querySelector('.box-avatar');
-                var img = avi.querySelector('img');
-                img.src = avatar_url;
+                var pic = avi.querySelector('picture');
+                var img = document.createElement('img');
+                img.src = user.avatar_url;
+                pic.innerHTML = img.outerHTML;
 
                 document.body.setAttribute('uid', uid)
                 //localStorage.setItem('githubAccessToken', token);

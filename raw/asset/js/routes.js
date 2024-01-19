@@ -31,8 +31,14 @@ window.routes = function(uri, options) {
         )
 
         if (sub) {
+            console.log(34.1, {
+                sub
+            });
         } else {
-            
+            console.log(34.2, {
+                uri,
+                options
+            });
         }
     }
 }

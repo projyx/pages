@@ -26,6 +26,11 @@ page[routes="/"] {
         width: 100%;
     }
 
+    page[routes="/"] blocks > block > header > card i {
+        height: 50px;
+        width: 50px;
+    }
+
     page[routes="/"] blocks > block > header > card:nth-child(1) > row {
         align-items: flex-start;
         width: 100%;
@@ -68,7 +73,11 @@ page[routes="/"] {
     }
 
     page[routes="/"] blocks > block > flex > card > section > textarea {
+        background: unset;
         border: unset;
+        color: white;
+        font-family: Arial;
+        font-size: 16px;
         height: 100%;
         padding: 30px;
         resize: none;
