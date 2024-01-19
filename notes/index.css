@@ -29,6 +29,7 @@
 
     body > .body-nav .nav-card > column {
         flex-direction: column;
+        padding: 10px 0;
     }
 
     body > .body-nav .nav-card .card-box {
@@ -36,7 +37,7 @@
         flex-direction: column;
         font-size: 13px;
         gap: 5px;
-        line-height: 50px;
+        line-height: 30px;
     }
 
     body > .body-nav .nav-card > column > .card-box {
@@ -48,12 +49,17 @@
     }
 
     body > .body-nav .nav-card > column > .card-box > column {
+        display: none;
         padding-left: 16px;
+    }
+
+    body > .body-nav .nav-card .card-box i:first-child {
+        /* padding-left: 20px; */
     }
 
     body > .body-nav .nav-card .card-box i {
         color: #fe0000;
-        height: 50px;
+        height: 30px;
         width: 30px;
     }
 }
