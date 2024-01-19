@@ -9,7 +9,6 @@ page[routes="/"] {
     }
 
     page[routes="/"] blocks > block {
-        color: #fe0000;
         flex-direction: column;
         height: 100%;
         width: 100%;
@@ -17,8 +16,14 @@ page[routes="/"] {
 
     page[routes="/"] blocks > block > header {
         border-bottom: 1px solid #ccc;
+        color: #fe0000;
         display: flex;
         flex-direction: row;
+    }
+
+    page[routes="/"] blocks > block > column {
+        color: white;
+        padding: 20px;
     }
 
     page[routes="/"] blocks > block > header > card {
@@ -31,13 +36,32 @@ page[routes="/"] {
         width: 50px;
     }
 
+    page[routes="/"] blocks > block > header > card:first-child i:first-child {
+        height: 50px;
+        width: 20px;
+    }
+
+    page[routes="/"] blocks > block > header > card:first-child i + i {
+        height: 50px;
+        width: auto;
+    }
+
     page[routes="/"] blocks > block > header > card:nth-child(1) > row {
         align-items: flex-start;
         width: 100%;
     }
 
     page[routes="/"] blocks > block > header > card:nth-child(1) > row {
+        gap: 5px;
         width: 100%;
+    }
+
+    page[routes="/"] blocks > block > header > card:nth-child(1) > row > i:first-child {
+        margin-left: 10px;
+    }
+
+    page[routes="/"] blocks > block > header > card:nth-child(1) > row > i:last-child {
+        margin-right: 10px;
     }
 
     page[routes="/"] blocks > block > header > card:nth-child(2) > row {
@@ -49,12 +73,12 @@ page[routes="/"] {
         justify-content: flex-end;
         width: 100%;
     }
-    
+
     page[routes="/"] blocks > block > flex {
         height: 100%;
         width: 100%;
     }
-    
+
     page[routes="/"] blocks > block > flex > card {
         width: 100%;
     }
@@ -86,5 +110,9 @@ page[routes="/"] {
 
     page[routes="/"] blocks > block > flex > card > section > textarea:focus {
         outline: none;
+    }
+
+    page[routes="/"] blocks > block > column > card box > row {
+        gap: 5px;
     }
 }

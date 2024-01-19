@@ -114,44 +114,6 @@
                 </card>
             </column>
         </nav>
-        <aside class="body-aside">
-            <header class="aside-header">
-                <card class="header-card">
-                    <form>
-                        <box class="card-box">
-                            <flex>
-                                <i>
-                                    <con class="gg-search"></con>
-                                </i>
-                                <input placeholder="Search All Notes" type="text">
-                            </flex>
-                        </box>
-                    </form>
-                </card>
-            </header>
-            <column class="aside-column">
-                <card class="column-card">
-                    <column></column>
-                    <template>
-                        <box class="card-box" id="snippets">
-                            <column>
-                                <text placeholder="Title"></text>
-                            </column>
-                            <column>
-                                <text placeholder="Date"></text>
-                                <text placeholder="Content"></text>
-                            </column>
-                            <row>
-                                <i>
-                                    <con class="gg-folder"></con>
-                                </i>
-                                <text>Folder</text>
-                            </row>
-                        </box>
-                    </template>
-                </card>
-            </column>
-        </aside>
         <main class="body-main">
             <page routes="/">
                 <blocks>
@@ -160,41 +122,60 @@
                             <card>
                                 <row>
                                     <i>
+                                        <con class="gg-menu-grid-r"></con>
+                                    </i>
+                                    <i>
+                                        <con class="gg-arrows-scroll-x"></con>
+                                    </i>
+                                </row>
+                            </card>
+                            <card>
+                                <row>
+                                    <i>
+                                        <con class="gg-math-plus"></con>
+                                    </i>
+                                    <i>
+                                        <con class="gg-software-upload"></con>
+                                    </i>
+                                    <i>
+                                        <con class="gg-folder-add"></con>
+                                    </i>
+                                </row>
+                            </card>
+                            <card>
+                                <row>
+                                    <i>
+                                        <con class="gg-software-download"></con>
+                                    </i>
+                                    <i>
                                         <con class="gg-trash"></con>
                                     </i>
-                                </row>
-                            </card>
-                            <card>
-                                <row>
                                     <i>
-                                        <con class="gg-format-text"></con>
+                                        <con class="gg-share"></con>
                                     </i>
                                     <i>
-                                        <con class="gg-layout-list"></con>
+                                        <con class="gg-mail"></con>
                                     </i>
                                     <i>
-                                        <con class="gg-view-grid"></con>
-                                    </i>
-                                </row>
-                            </card>
-                            <card>
-                                <row>
-                                    <i>
-                                        <con></con>
-                                    </i>
-                                    <i>
-                                        <con class="gg-pen"></con>
+                                        <con class="gg-more-o"></con>
                                     </i>
                                 </row>
                             </card>
                         </header>
-                        <flex>
+                        <column>
                             <card>
                                 <section>
-                                    <textarea></textarea>
+                                    <box>
+                                        <row>
+                                            <i>
+                                                <con class="gg-cloud"></con>
+                                            </i>
+                                                <text>iCloud Drive</text>
+                                        </row>
+                                    </box>
                                 </section>
                             </card>
-                        </flex>
+                        </column>
                     </block>
                 </blocks>
             </page>
