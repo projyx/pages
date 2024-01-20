@@ -20,6 +20,14 @@
         width: 240px;
     }
 
+    @media (max-width: 768px) {
+        body > .body-nav {
+            position: fixed;
+            top: 50px;
+            transform: translateX(-100%);
+        }
+    }
+
     body > .body-nav .nav-card {
         /* box-sizing: border-box; */
         height: calc(100% - 50px);
@@ -159,6 +167,19 @@
         box-sizing: border-box;
         display: flex;
         flex: 1;
+        max-width: calc(100% - 240px);
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        .body-main {
+            box-sizing: border-box;
+            display: flex;
+            flex: 1;
+            height: 100%;
+            max-width: calc(100%);
+            width: 100%;
+        }
     }
 
     .body-main > page {
@@ -225,7 +246,7 @@
     body > .body-header .card-branding picture + text + text {
         color: #fe0000;
     }
-    
+
     body > .body-header .card-buttons {
         color: #111;
         display: flex;
