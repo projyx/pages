@@ -23,6 +23,7 @@ page[routes="/"] {
         color: #fe0000;
         display: flex;
         flex-direction: row;
+        overflow: hidden;
     }
 
     page[routes="/"] blocks > block > column {
