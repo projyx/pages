@@ -91,8 +91,13 @@
 
     @media (max-width: 960px) {
         body > .body-aside {
+            background: #0f0f0f;
+            border-right: unset;
+            height: 100%;
             position: fixed;
-            width: 100%
+            transform: translateX(-100%);
+            width: 100%;
+            z-index: 123;
         }
     }
 
@@ -134,7 +139,7 @@
     }
 
     body > .body-aside .header-card > form .card-box {
-        width: 100%;
+        /* width: 100%; */
     }
 
     body > .body-aside .header-card > form .card-box text {
@@ -191,7 +196,7 @@
         .body-main {
             box-sizing: border-box;
             display: flex;
-            flex: unset;
+            flex: 1;
             max-width: 100%;
             width: calc(100% - 0px);
             height: calc(100% - 50px);
