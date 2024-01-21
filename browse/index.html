@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>[ Pages ] Jyxer | ProJyx</title>
+        <title>Notes [ Pages ] Jyxer | ProJyx</title>
         <meta name='viewport' content='width=device-width,initial-scale=1.0,maximum-scale=1.0'>
         <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
         <meta name='apple-mobile-web-app-capable' content='yes'>
@@ -10,8 +10,8 @@
         <meta name="application-shortname">
         <meta name="msapplication-TileColor">
         <meta name='theme-color'>
-        <link async href="https://endk.it/raw/asset/css/icons.css" rel="stylesheet">
-        <link async href="https://endk.it/raw/asset/css/ui.css" rel="stylesheet">
+        <link async href="https://cdn.jsdelivr.net/npm/css.gg/icons/icons.css" rel="stylesheet">
+        <link href="https://endk.it/raw/asset/css/ui.css" rel="stylesheet">
         <link href="index.css" rel="stylesheet">
         <link href="raw/style/_.css" rel="stylesheet">
         <link href="raw/style/theme.css" rel="stylesheet">
@@ -20,21 +20,19 @@
         <script src="https://endk.it/raw/asset/js/ochopussy.js"></script>
         <script src="https://endk.it/raw/asset/js/router.js"></script>
         <script src="index.js"></script>
-        <script src="raw/asset/js/events.js"></script>
         <script src="raw/asset/js/routes.js"></script>
         <script>
             var domains = {
                 "pages.jyxer.com": "/",
-                "pages.jyxer.tld": "/",
+                "pages.jyxer.tld": "/notes",
                 "pages-jyxer.pages.dev": "/notes",
-                "projyx.github.tld": "/pages/notes",
                 "projyx.github.io": "/pages/notes"
             };
             var base = document.createElement('base');
             var template = document.head.querySelector('template');
             var host = window.location.host;
             var origin = window.location.origin;
-            base.href = origin + domains[host] + (window.location.origin + "/" === window.location.href ? "" : "/");
+            base.href = origin + domains[host] + "/";
             document.head.querySelector('script').insertAdjacentHTML("afterend", base.outerHTML);
             base = document.head.querySelector('script').nextElementSibling;
             //console.log(base, template);
@@ -46,16 +44,16 @@
             <row>
                 <card class="card-branding">
                     <flex>
-                        <picture>
+                        <picture href="/">
                             <img src="raw/asset/png/jyxer.png">
                         </picture>
-                        <text>Jyxer</text>
-                        <text>Pages</text>
+                        <text href="/">Pages</text>
+                        <text href="/notes">Notes</text>
                     </flex>
                 </card>
                 <card class="card-buttons">
                     <row>
-                        <box class="box-create" href="/notes">
+                        <box class="box-create">
                             <flex>
                                 <i>
                                     <con class="gg-add"></con>
@@ -73,7 +71,7 @@
                             <flex>
                                 <picture></picture>
                                 <picture>
-                                    <img src="raw/asset/png/github.png">
+                                    <img src="/raw/asset/png/github.png">
                                 </picture>
                             </flex>
                         </box>
@@ -88,37 +86,68 @@
                         <box class="card-box" id="snippets">
                             <row>
                                 <i>
-                                    <con class="gg-timer"></con>
+                                    <con class="gg-feed"></con>
                                 </i>
-                                <text>Recents</text>
+                                <text>Home Feed</text>
                             </row>
                         </box>
-                        <box class="card-box" href="/browse" id="snippets">
+                        <box class="card-box" id="snippets">
+                            <row>
+                                <i>
+                                    <con class="gg-globe-alt"></con>
+                                </i>
+                                <text>My Network</text>
+                            </row>
+                        </box>
+                        <box class="card-box" id="snippets">
+                            <row>
+                                <i>
+                                    <con class="gg-database"></con>
+                                </i>
+                                <text>File Cache</text>
+                            </row>
+                        </box>
+                        <box class="card-box" id="snippets">
+                            <row>
+                                <i>
+                                    <con class="gg-notes"></con>
+                                </i>
+                                <text>All Notes</text>
+                            </row>
+                        </box>
+                        <box class="card-box" id="snippets">
+                            <row>
+                                <i>
+                                    <con class="gg-code-slash"></con>
+                                </i>
+                                <text>Snippets</text>
+                            </row>
+                        </box>
+                        <box class="card-box" id="snippets">
                             <row>
                                 <i>
                                     <con class="gg-folder"></con>
                                 </i>
-                                <text>Browse</text>
+                                <text>Projects</text>
                             </row>
+                            <column></column>
+                            <template>
+                                <box class="card-box" id="snippets">
+                                    <row>
+                                        <i>
+                                            <con class="gg-folder"></con>
+                                        </i>
+                                        <text></text>
+                                    </row>
+                                </box>
+                            </template>
                         </box>
                         <box class="card-box" id="snippets">
                             <row>
                                 <i>
-                                    <con class="gg-trash"></con>
+                                    <con class="gg-lock"></con>
                                 </i>
-                                <text>Trash</text>
-                            </row>
-                        </box>
-                    </column>
-                </card>
-                <card class="nav-card">
-                    <column>
-                        <box class="card-box" id="snippets">
-                            <row>
-                                <i>
-                                    <con class="gg-share"></con>
-                                </i>
-                                <text>Shared</text>
+                                <text>Key Store</text>
                             </row>
                         </box>
                     </column>
@@ -133,16 +162,10 @@
                             <card>
                                 <row>
                                     <i>
-                                        <con class="gg-chevron-left"></con>
-                                    </i>
-                                    <i>
                                         <con class="gg-trash"></con>
                                     </i>
                                 </row>
                                 <row>
-                                    <i>
-                                        <con class="gg-menu-grid-r"></con>
-                                    </i>
                                     <i>
                                         <con class="gg-arrows-scroll-x"></con>
                                     </i>
@@ -151,58 +174,34 @@
                             <card>
                                 <row>
                                     <i>
-                                        <con class="gg-math-plus"></con>
+                                        <con class="gg-format-text"></con>
                                     </i>
                                     <i>
-                                        <con class="gg-software-upload"></con>
+                                        <con class="gg-layout-list"></con>
                                     </i>
                                     <i>
-                                        <con class="gg-folder-add"></con>
+                                        <con class="gg-view-grid"></con>
                                     </i>
                                 </row>
                             </card>
                             <card>
                                 <row>
                                     <i>
-                                        <con class="gg-software-download"></con>
-                                    </i>
-                                    <i>
-                                        <con class="gg-trash"></con>
-                                    </i>
-                                    <i>
                                         <con class="gg-share"></con>
                                     </i>
-                                    <i>
-                                        <con class="gg-mail"></con>
-                                    </i>
-                                    <i>
-                                        <con class="gg-more-o"></con>
-                                    </i>
-                                </row>
-                                <row>
                                     <i>
                                         <con class="gg-pen"></con>
                                     </i>
                                 </row>
                             </card>
                         </header>
-                        <column>
+                        <flex>
                             <card>
-                                <row>
-                                    <box class="box-tree">
-                                        <row>
-                                            <i>
-                                                <con class="gg-cloud"></con>
-                                            </i>
-                                            <text>
-                                                <span>Cloud</span>
-                                                <span>Explorer</span>
-                                            </text>
-                                        </row>
-                                    </box>
-                                </row>
+                                <section>
+                                    <textarea></textarea>
+                                </section>
                             </card>
-                        </column>
+                        </flex>
                     </block>
                 </blocks>
             </page>

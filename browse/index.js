@@ -108,6 +108,4 @@ window.onload = async function() {
     }
 
     document.getElementById('snippets').classList.add('active');
-    
-    document.body.onclick = window.events.onclick.document;
 }

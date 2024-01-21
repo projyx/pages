@@ -1,0 +1,90 @@
+page[routes="/"] {
+    width: 100%;
+}
+
+@media {
+    page[routes="/"] blocks {
+        height: 100%;
+        width: 100%;
+    }
+
+    page[routes="/"] blocks > block {
+        color: #fe0000;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+
+    page[routes="/"] blocks > block > header {
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        flex-direction: row;
+    }
+
+    page[routes="/"] blocks > block > header > card {
+        height: 50px;
+        width: 100%;
+    }
+
+    page[routes="/"] blocks > block > header > card i {
+        height: 50px;
+        width: 50px;
+    }
+
+    page[routes="/"] blocks > block > header > card:nth-child(1) > row {
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    page[routes="/"] blocks > block > header > card:nth-child(1) > row {
+        width: 100%;
+    }
+
+    page[routes="/"] blocks > block > header > card:nth-child(2) > row {
+        justify-content: center;
+        width: 100%;
+    }
+
+    page[routes="/"] blocks > block > header > card:nth-child(3) > row {
+        justify-content: flex-end;
+        width: 100%;
+    }
+    
+    page[routes="/"] blocks > block > flex {
+        height: 100%;
+        width: 100%;
+    }
+    
+    page[routes="/"] blocks > block > flex > card {
+        width: 100%;
+    }
+
+    page[routes="/"] blocks > block > flex > card > header {
+        width: 100%;
+    }
+
+    page[routes="/"] blocks > block > flex > card > header {
+        width: 100%;
+    }
+
+    page[routes="/"] blocks > block > flex > card > section {
+        height: 100%;
+        width: 100%;
+    }
+
+    page[routes="/"] blocks > block > flex > card > section > textarea {
+        background: unset;
+        border: unset;
+        color: white;
+        font-family: Arial;
+        font-size: 16px;
+        height: 100%;
+        padding: 30px;
+        resize: none;
+        width: 100%;
+    }
+
+    page[routes="/"] blocks > block > flex > card > section > textarea:focus {
+        outline: none;
+    }
+}
