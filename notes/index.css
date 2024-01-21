@@ -219,11 +219,14 @@
         position: relative;
         top: 0;
         width: 100%;
-    }
-
-    body > .body-header {
         display: flex;
         justify-content: space-between;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        body > .body-header {
+            content: '';
+        }
     }
 
     body > .body-header > row {
